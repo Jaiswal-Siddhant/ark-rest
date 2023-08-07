@@ -1,0 +1,13 @@
+schemas:
+    - id: init
+      collection: init
+      schema: './model.js'
+
+config:
+    db: mongodb
+    url: mongodb://localhost:27017/
+
+server:
+    port: 3000                      # Optional
+    logging:                        # Optional
+        enabled: true               # Defaults to false

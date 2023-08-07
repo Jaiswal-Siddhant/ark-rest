@@ -1,0 +1,21 @@
+schemas:
+    - id: /
+      collection: book
+      schema: './Models/booksModel.js'
+
+config:
+    db: mongodb
+    url: mongodb://localhost:27017/
+
+server:
+    port: 3000                      # Optional
+    
+    # This creats /auth/register and /auth/login routes 
+    auth: 
+        enabled: true
+        schema: './Models/userModel.js'
+        cookieExpire: 600
+        secret: 'secret' 
+
+    logging:                        # Optional
+        enabled: true               # Defaults to false
